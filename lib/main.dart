@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,18 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Troisgros Restaurant Menu',
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.red),
-      ),
-      home: const MyHomePage(title: 'Troisgros Restaurant Menu'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -33,8 +30,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        backgroundColor: Colors.red,
+        title: Text("Troisgros Restaurant Menu", style: TextStyle(color: Colors.white)),
       ),
       body: Center(
         child: Column(
