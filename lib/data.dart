@@ -1,11 +1,12 @@
-import 'item.dart';
+import 'menuItem.dart';
+import 'product.dart';
 import 'combo.dart';
 import 'category.dart';
 
 // ---------------------------------------------------------------------------
 // ENTRÉES
 // ---------------------------------------------------------------------------
-const chestnutSoup = Item(
+const chestnutSoup = Product(
   name: 'Velouté de châtaignes',
   description: 'Crème de châtaignes onctueuse, éclats de noisettes torréfiées.',
   price: 14.00,
@@ -13,7 +14,7 @@ const chestnutSoup = Item(
   category: Category.starter,
 );
 
-const perfectEgg = Item(
+const perfectEgg = Product(
   name: 'Œuf parfait',
   description: 'Œuf cuit à basse température, crème de champignons des bois.',
   price: 16.00,
@@ -21,7 +22,7 @@ const perfectEgg = Item(
   category: Category.starter,
 );
 
-const salmonTartare = Item(
+const salmonTartare = Product(
   name: 'Tartare de saumon',
   description: 'Saumon frais, aneth, citron vert et huile d\'olive.',
   price: 18.00,
@@ -29,7 +30,7 @@ const salmonTartare = Item(
   category: Category.starter,
 );
 
-const goatCheeseSalad = Item(
+const goatCheeseSalad = Product(
   name: 'Salade de chèvre chaud',
   description: 'Toasts de chèvre gratinés au miel, mesclun et noix.',
   price: 13.50,
@@ -40,7 +41,7 @@ const goatCheeseSalad = Item(
 // ---------------------------------------------------------------------------
 // PLATS PRINCIPAUX
 // ---------------------------------------------------------------------------
-const salmonSorrel = Item(
+const salmonSorrel = Product(
   name: 'Escalope de saumon à l\'oseille',
   description: 'Le plat signature de la maison, sauce crémée à l\'oseille.',
   price: 34.00,
@@ -48,7 +49,7 @@ const salmonSorrel = Item(
   category: Category.main,
 );
 
-const beefFillet = Item(
+const beefFillet = Product(
   name: 'Filet de bœuf au poivre',
   description: 'Filet de bœuf charolais, sauce au poivre, gratin dauphinois.',
   price: 38.00,
@@ -56,7 +57,7 @@ const beefFillet = Item(
   category: Category.main,
 );
 
-const chickenMorels = Item(
+const chickenMorels = Product(
   name: 'Suprême de volaille aux morilles',
   description: 'Volaille fermière rôtie, sauce crème aux morilles.',
   price: 32.00,
@@ -64,7 +65,7 @@ const chickenMorels = Item(
   category: Category.main,
 );
 
-const asparagusRisotto = Item(
+const asparagusRisotto = Product(
   name: 'Risotto aux asperges',
   description: 'Riz carnaroli crémeux, asperges vertes et copeaux de parmesan.',
   price: 26.00,
@@ -75,7 +76,7 @@ const asparagusRisotto = Item(
 // ---------------------------------------------------------------------------
 // DESSERTS
 // ---------------------------------------------------------------------------
-const souffle = Item(
+const souffle = Product(
   name: 'Soufflé au Grand Marnier',
   description: 'Soufflé léger et aérien, servi dès la sortie du four.',
   price: 15.00,
@@ -83,7 +84,7 @@ const souffle = Item(
   category: Category.dessert,
 );
 
-const appleTart = Item(
+const appleTart = Product(
   name: 'Tarte fine aux pommes',
   description: 'Pâte feuilletée, pommes caramélisées, glace vanille.',
   price: 12.00,
@@ -91,7 +92,7 @@ const appleTart = Item(
   category: Category.dessert,
 );
 
-const chocolateMousse = Item(
+const chocolateMousse = Product(
   name: 'Mousse au chocolat noir',
   description: 'Chocolat noir 70 %, fleur de sel et tuile croquante.',
   price: 11.00,
@@ -99,7 +100,7 @@ const chocolateMousse = Item(
   category: Category.dessert,
 );
 
-const cheesePlate = Item(
+const cheesePlate = Product(
   name: 'Assiette de fromages affinés',
   description: 'Sélection de fromages de la région, confiture de figues.',
   price: 14.00,
@@ -110,7 +111,7 @@ const cheesePlate = Item(
 // ---------------------------------------------------------------------------
 // BOISSONS
 // ---------------------------------------------------------------------------
-const stillWater = Item(
+const stillWater = Product(
   name: 'Eau minérale plate',
   description: 'Bouteille de 75 cl.',
   price: 6.00,
@@ -118,7 +119,7 @@ const stillWater = Item(
   category: Category.drink,
 );
 
-const sparklingWater = Item(
+const sparklingWater = Product(
   name: 'Eau pétillante',
   description: 'Bouteille de 75 cl.',
   price: 6.00,
@@ -126,7 +127,7 @@ const sparklingWater = Item(
   category: Category.drink,
 );
 
-const orangeJuice = Item(
+const orangeJuice = Product(
   name: 'Jus d\'orange pressé',
   description: 'Oranges pressées minute, 25 cl.',
   price: 7.00,
@@ -134,7 +135,7 @@ const orangeJuice = Item(
   category: Category.drink,
 );
 
-const lemonade = Item(
+const lemonade = Product(
   name: 'Limonade artisanale',
   description: 'Citron, sucre de canne et eau pétillante, 33 cl.',
   price: 6.50,
@@ -142,7 +143,7 @@ const lemonade = Item(
   category: Category.drink,
 );
 
-const icedTea = Item(
+const icedTea = Product(
   name: 'Thé glacé maison',
   description: 'Thé noir infusé à froid, pêche et menthe, 33 cl.',
   price: 6.50,
@@ -150,7 +151,7 @@ const icedTea = Item(
   category: Category.drink,
 );
 
-const redWine = Item(
+const redWine = Product(
   name: 'Côte-Roannaise rouge',
   description: 'Vin rouge de la région, servi au verre (12 cl).',
   price: 9.00,
@@ -158,7 +159,7 @@ const redWine = Item(
   category: Category.drink,
 );
 
-const chablis = Item(
+const chablis = Product(
   name: 'Chablis',
   description: 'Vin blanc sec de Bourgogne, servi au verre (12 cl).',
   price: 11.00,
@@ -166,7 +167,7 @@ const chablis = Item(
   category: Category.drink,
 );
 
-const champagne = Item(
+const champagne = Product(
   name: 'Coupe de champagne',
   description: 'Champagne brut, coupe de 12 cl.',
   price: 16.00,
@@ -174,7 +175,7 @@ const champagne = Item(
   category: Category.drink,
 );
 
-const craftBeer = Item(
+const craftBeer = Product(
   name: 'Bière artisanale',
   description: 'Blonde brassée localement, 33 cl.',
   price: 7.00,
@@ -182,23 +183,23 @@ const craftBeer = Item(
   category: Category.drink,
 );
 
-const espresso = Item(
-  name: 'Espresso',
+const espresso = Product(
+  name: 'Expresso',
   description: 'Café 100 % arabica.',
   price: 4.00,
-  photo: 'assets/images/espresso.png',
+  photo: 'assets/images/expresso.png',
   category: Category.drink,
 );
 
-const cafeCreme = Item(
+const cafeCreme = Product(
   name: 'Café crème',
-  description: 'Espresso allongé et lait mousseux.',
+  description: 'Expresso allongé et lait mousseux.',
   price: 5.00,
   photo: 'assets/images/cafe-creme.png',
   category: Category.drink,
 );
 
-const verbenaTea = Item(
+const verbenaTea = Product(
   name: 'Infusion verveine',
   description: 'Verveine du Velay, servie en théière.',
   price: 5.00,
@@ -207,9 +208,36 @@ const verbenaTea = Item(
 );
 
 // ---------------------------------------------------------------------------
-// LISTE COMPLÈTE DES ÉLÉMENTS (à filtrer selon la catégorie choisie)
+// FORMULES
 // ---------------------------------------------------------------------------
-const List<Item> items = [
+const discoveryCombo = Combo(
+  name: 'Formule Découverte',
+  description: 'Chèvre chaud, risotto, mousse au chocolat et eau plate.',
+  price: 48.00, // au lieu de 56,50 €
+  photo: 'assets/images/risotto-asperges.png',
+  items: [goatCheeseSalad, asparagusRisotto, chocolateMousse, stillWater],
+);
+
+const traditionCombo = Combo(
+  name: 'Formule Tradition',
+  description: 'Œuf parfait, saumon à l\'oseille, tarte aux pommes et verre de rouge.',
+  price: 62.00, // au lieu de 71,00 €
+  photo: 'assets/images/saumon-oseille.png',
+  items: [perfectEgg, salmonSorrel, appleTart, redWine],
+);
+
+const prestigeCombo = Combo(
+  name: 'Formule Prestige',
+  description: 'Tartare de saumon, filet de bœuf, soufflé et coupe de champagne.',
+  price: 79.00, // au lieu de 87,00 €
+  photo: 'assets/images/filet-boeuf.png',
+  items: [salmonTartare, beefFillet, souffle, champagne],
+);
+
+
+const List<MenuItem> menu = [
+  // Formules
+  discoveryCombo, traditionCombo, prestigeCombo,
   // Entrées
   chestnutSoup, perfectEgg, salmonTartare, goatCheeseSalad,
   // Plats
@@ -219,31 +247,4 @@ const List<Item> items = [
   // Boissons
   stillWater, sparklingWater, orangeJuice, lemonade, icedTea, redWine,
   chablis, champagne, craftBeer, espresso, cafeCreme, verbenaTea,
-];
-
-// ---------------------------------------------------------------------------
-// FORMULES (prix inférieur à la somme des éléments)
-// ---------------------------------------------------------------------------
-const List<Combo> combos = [
-  Combo(
-    name: 'Formule Découverte',
-    description: 'Chèvre chaud, risotto, mousse au chocolat et eau plate.',
-    price: 48.00, // au lieu de 56,50 €
-    photo: 'assets/images/risotto-asperges.png',
-    items: [goatCheeseSalad, asparagusRisotto, chocolateMousse, stillWater],
-  ),
-  Combo(
-    name: 'Formule Tradition',
-    description: 'Œuf parfait, saumon à l\'oseille, tarte aux pommes et verre de rouge.',
-    price: 62.00, // au lieu de 71,00 €
-    photo: 'assets/images/saumon-oseille.png',
-    items: [perfectEgg, salmonSorrel, appleTart, redWine],
-  ),
-  Combo(
-    name: 'Formule Prestige',
-    description: 'Tartare de saumon, filet de bœuf, soufflé et coupe de champagne.',
-    price: 79.00, // au lieu de 87,00 €
-    photo: 'assets/images/filet-boeuf.png',
-    items: [salmonTartare, beefFillet, souffle, champagne],
-  ),
 ];

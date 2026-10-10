@@ -1,1 +1,1 @@
-enum Category { starter, main, dessert, drink }
+enum Category { starter, main, dessert, drink, combo }
