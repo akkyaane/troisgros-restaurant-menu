@@ -184,10 +184,10 @@ const craftBeer = Product(
 );
 
 const espresso = Product(
-  name: 'Expresso',
+  name: 'Espresso',
   description: 'Café 100 % arabica.',
   price: 4.00,
-  photo: 'assets/images/expresso.png',
+  photo: 'assets/images/espresso.png',
   category: Category.drink,
 );
 
@@ -213,27 +213,31 @@ const verbenaTea = Product(
 const discoveryCombo = Combo(
   name: 'Formule Découverte',
   description: 'Chèvre chaud, risotto, mousse au chocolat et eau plate.',
-  price: 48.00, // au lieu de 56,50 €
+  price: 48.00,
+  // au lieu de 56,50 €
   photo: 'assets/images/risotto-asperges.png',
   items: [goatCheeseSalad, asparagusRisotto, chocolateMousse, stillWater],
 );
 
 const traditionCombo = Combo(
   name: 'Formule Tradition',
-  description: 'Œuf parfait, saumon à l\'oseille, tarte aux pommes et verre de rouge.',
-  price: 62.00, // au lieu de 71,00 €
+  description:
+      'Œuf parfait, saumon à l\'oseille, tarte aux pommes et verre de rouge.',
+  price: 62.00,
+  // au lieu de 71,00 €
   photo: 'assets/images/saumon-oseille.png',
   items: [perfectEgg, salmonSorrel, appleTart, redWine],
 );
 
 const prestigeCombo = Combo(
   name: 'Formule Prestige',
-  description: 'Tartare de saumon, filet de bœuf, soufflé et coupe de champagne.',
-  price: 79.00, // au lieu de 87,00 €
+  description:
+      'Tartare de saumon, filet de bœuf, soufflé et coupe de champagne.',
+  price: 79.00,
+  // au lieu de 87,00 €
   photo: 'assets/images/filet-boeuf.png',
   items: [salmonTartare, beefFillet, souffle, champagne],
 );
-
 
 const List<MenuItem> menu = [
   // Formules

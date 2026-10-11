@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'category.dart';
-import 'product.dart';
 import 'data.dart';
 import 'combo.dart';
 import 'menuItem.dart';
@@ -29,11 +28,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Category selected = Category.starter;
+  // Initialisation d'une catégorie par défaut à l'ouverture de l'application
+  Category categorySelected = Category.starter;
 
   @override
   Widget build(BuildContext context) {
-    final visibleItems = menu.where((b) => b.category == selected).toList();
+    // Récupération du contenu lié à la catégorie par défaut
+    final visibleItems = menu
+        .where((b) => b.category == categorySelected)
+        .toList();
 
     final Map<String, String> translatedCategoryNames = {
       'starter': 'Entrées',
@@ -43,13 +46,16 @@ class _MyHomePageState extends State<MyHomePage> {
       'combo': 'Formules',
     };
 
+    // Affichage du nom de l'application et des différentes catégories. Pour chaque catégorie, utilisation du composant Card autant de fois que nécessaire et affichage du contenu
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text(
-          "Menu - Troisgros",
-          style: TextStyle(color: Colors.white),
-          textAlign: TextAlign.center,
+        title: Align(
+          alignment: Alignment.center,
+          child: Text(
+            "Menu - Restaurant Troisgros",
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
       body: Center(
@@ -64,8 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: EdgeInsets.all(4),
                     child: ChoiceChip(
                       label: Text(translatedCategoryNames[c.name] ?? c.name),
-                      selected: c == selected,
-                      onSelected: (_) => setState(() => selected = c),
+                      selected: c == categorySelected,
+                      onSelected: (_) => setState(() => categorySelected = c),
                     ),
                   );
                 }).toList(),
@@ -92,10 +98,12 @@ class MenuItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Récupération de l'item actuel
     final self = menuItem;
 
+    // Affichage de la card avec les différentes propriétés : à gauche les informations, à droite l'image
     return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       child: Padding(
         padding: const EdgeInsets.all(24),
         child: Row(
@@ -106,15 +114,19 @@ class MenuItemCard extends StatelessWidget {
                 children: [
                   Text(
                     self.name,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
+                      color: Colors.red,
                       fontSize: 16,
                     ),
                   ),
                   Text(self.description),
-                  Text('${self.price.toStringAsFixed(2)} €', style: const TextStyle(
-                    fontSize: 14,
-                  ),),
+                  Text(
+                    '${self.price.toStringAsFixed(2)} €',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
+
+                  // Si l'item actuel est une formule, affichage des plats
                   if (self is Combo)
                     for (final item in self.items) Text('• ${item.name}'),
                 ],
@@ -123,9 +135,7 @@ class MenuItemCard extends StatelessWidget {
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset(self.photo, width: 200, height: 200),
-                ],
+                children: [Image.asset(self.photo, width: 200, height: 200)],
               ),
             ),
           ],
